@@ -3,7 +3,7 @@
 > This is a Leaderboard web app first mile 
 > Where I am using gihub-flow aproach and
 > I have added webPack and linters
-> from the array   
+> and a simple static leaderboard UI  
 
 
 ## Built With
