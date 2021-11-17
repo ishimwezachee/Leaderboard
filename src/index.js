@@ -38,15 +38,7 @@ const sendScores = async ()=>{
     console.log(content);
 }
 
-submit.addEventListener('click',(e)=>{
-  e.preventDefault();
-  sendScores();
-  nameField.value="";
-  scoreField.value="";
-});
-
-// Get Posted Data 
-// get the users from the database; 
+//Get Data 
 const getData = async(callback)=>{
   const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a693dn4AamOZ5GxAOLyY/scores/'
 const data = await fetch(url);
@@ -55,17 +47,26 @@ console.log(content.result)
 callback(content.result)
 }
 
+// Display Data 
 const display = scores=>{
   scores.forEach((score) => {
   list.innerHTML += `<li>${score.user}:${score.score}</li>`;
   });
 }
 
+// submit Data 
+
+submit.addEventListener('click',(e)=>{
+  e.preventDefault();
+  sendScores();
+  nameField.value="";
+  scoreField.value="";
+});
 
 // refresh 
-
 refresh.addEventListener('click',()=>{
-  getData();
+  list.innerHTML ='';
+  getData(display);
 })
 
 getData(display);
