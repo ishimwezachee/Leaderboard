@@ -64,6 +64,10 @@ const display = scores=>{
 
 // refresh 
 
+refresh.addEventListener('click',()=>{
+  getData();
+})
+
 getData(display);
 
 
