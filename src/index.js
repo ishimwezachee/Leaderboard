@@ -1,6 +1,6 @@
 import './style.css';
-import sendUser from './scores.js';
-import getData from './data.js';
+import sendUser from './api/scores.js';
+import getData from './api/data.js';
 
 const list = document.querySelector('.container');
 const refresh = document.querySelector('.refresh');
