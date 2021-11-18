@@ -1,28 +1,14 @@
-const scores = [
-  {
-    name: 'Mucyo',
-    scores: 100,
-  },
-  {
-    name: 'Mucyo',
-    scores: 20,
-  },
-  {
-    name: 'Mucyo',
-    scores: 50,
-  },
-  {
-    name: 'Mucyo',
-    scores: 78,
-  },
-  {
-    name: 'Mucyo',
-    scores: 125,
-  },
-  {
-    name: 'Mucyo',
-    scores: 77,
-  },
-];
+const sendUser = async (user,score)=>{
+  const data = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/VrOSS4macDzbJhG8RSlo/scores/',{
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({"user":user, "score":score})
+    });
+    const content = await data.json();
+    console.log(content)
+}
 
-export default scores;
+export default sendUser;
