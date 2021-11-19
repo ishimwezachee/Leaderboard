@@ -6,13 +6,19 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: #ffadad;
 }
 
 main {
   display: flex;
-  border: 1px solid red;
-  width: 50%;
+  width: 60%;
   justify-content: space-around;
+  background-color: #ffdac7;
+  border-radius: 4px;
+}
+
+.container {
+  overflow-y: scroll;
 }
 
 .title {
@@ -30,9 +36,12 @@ ul.container {
   padding: 0;
 }
 
-.container li {
-  padding: 3px 200px 3px 5px;
+.list-item {
+  font-size: 20px;
+  padding: 3px 200px 3px 0;
   border: 1px solid rgb(231, 231, 231);
+  font-weight: 500;
+  font-family: monospace;
 }
 
 .inputField {
@@ -41,4 +50,38 @@ ul.container {
 
 .inputField li {
   margin: 10px;
+}
+
+.btn {
+  background-color: #ffadad;
+  background-color: rgb(152, 207, 152);
+  padding: 4px 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.refresh {
+  background-color: rgb(150, 150, 50);
+  border: 1px solid gray;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.name,
+.scores {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+h3 {
+  color: #9b992b;
+  font-size: 30px;
+}
+
+h1 {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 700;
 }

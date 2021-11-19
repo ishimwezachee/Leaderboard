@@ -12,7 +12,7 @@ const submit = document.querySelector('.btn');
 // Display Data
 const display = (scores) => {
   scores.forEach((score) => {
-    list.innerHTML += `<li>${score.user}:${score.score}</li>`;
+    list.innerHTML += `<li class="list-item">${score.user}:${score.score}</li>`;
   });
 };
 
